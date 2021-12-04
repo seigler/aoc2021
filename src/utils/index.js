@@ -22,3 +22,6 @@
  *     import myLib from '../utils/myLib'
  *     import { myUtil } from '../utils'
  */
+export function transpose(m) {
+  return m[0].map((x, i) => m.map((x) => x[i]))
+}
