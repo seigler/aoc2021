@@ -25,3 +25,12 @@
 export function transpose(m) {
   return m[0].map((x, i) => m.map((x) => x[i]))
 }
+
+export function sequence(a, b) {
+  const s = []
+  const increment = a < b ? 1 : -1
+  for (let i = a; (i += increment); i !== b + increment) {
+    s.push(i)
+  }
+  return s
+}
