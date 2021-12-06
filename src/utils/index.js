@@ -34,3 +34,24 @@ export function sequence(a, b) {
   }
   return s
 }
+
+export function memo(fn) {
+  const cache = {}
+
+  function get(args) {
+    let node = cache
+    for (const arg of args) {
+      if (!("next" in node)) node.next = new Map()
+      if (!node.next.has(arg)) node.next.set(arg, {})
+      node = node.next.get(arg)
+    }
+    return node
+  }
+
+  return function (...args) {
+    const cache = get(args)
+    if ("item" in cache) return cache.item
+    cache.item = fn(...args)
+    return cache.item
+  }
+}
