@@ -209,16 +209,20 @@
     },
     {
       "part1": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
+        "solved": true,
+        "result": "702",
+        "attempts": [
+          "NaN"
+        ],
+        "time": 55.8
       },
       "part2": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
+        "solved": true,
+        "result": "2955",
+        "attempts": [
+          "2967"
+        ],
+        "time": 761.32
       }
     },
     {
